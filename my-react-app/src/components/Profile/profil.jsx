@@ -8,7 +8,7 @@ export default function Profil() {
   const [profilePic, setProfilePic] = useState('');
 
   const handleUpdate = () => {
-    setIsEditing(true);
+    setIsEditing(true); 
   };
 
   const handleSave = (e) => {
@@ -25,7 +25,7 @@ export default function Profil() {
 
     reader.onload = (event) => {
       setProfilePic(event.target.result);
-      localStorage.setItem('profilePic', event.target.result); // Save the image to localStorage
+      localStorage.setItem('profilePic', event.target.result); // cette ligne permet de sauvegarder l'image dans le localStorage
     };
 
     if (file) {
