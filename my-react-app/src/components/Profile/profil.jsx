@@ -33,12 +33,7 @@ export default function Profil() {
     }
   };
 
-  useEffect(() => {
-    const savedProfilePic = localStorage.getItem('profilePic'); // j'essaye d'utilser le localStorage pour récupérer sauvegarder l'image au refresh
-    if (savedProfilePic) {
-      setProfilePic(savedProfilePic);
-    }
-  }, []); 
+ 
 
   return (
     <div className={styles.card}>
