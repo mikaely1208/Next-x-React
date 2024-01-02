@@ -54,7 +54,7 @@ export default function Profil() {
       </div>
       <form onSubmit={handleSave}>
         <label>
-          Name:
+          Name : 
           {isEditing ? (
             <input
               type="text"
@@ -63,12 +63,12 @@ export default function Profil() {
               disabled={!isEditing}
             />
           ) : (
-            <span>{name}</span>
+            <span> {name}</span>
           )}
         </label>
         <br />
         <label>
-          Age:
+          Age :
           {isEditing ? (
             <input
               type="number"
@@ -77,7 +77,7 @@ export default function Profil() {
               disabled={!isEditing}
             />
           ) : (
-            <span>{age}</span>
+            <span> {age}</span>
           )}
         </label>
         <br />
@@ -89,6 +89,7 @@ export default function Profil() {
             </button>
           </>
         ) : (
+          
           <button type="button" onClick={handleUpdate}>
             Edit
           </button>

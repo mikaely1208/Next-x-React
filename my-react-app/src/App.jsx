@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Profil from './components/Profile/profil'
 import PropsExample from './components/PropsExample/PropsExample'
+import Navbar from './components/Navbar/navbar'
 
 function App() {
   // react nous permet de mettre à jour le state de notre composant avec des outils appeleés hooks
@@ -25,6 +26,7 @@ function App() {
      {/* <h1>Vite + React</h1>
      <div className='card'>{name}</div> */}
      {/* <button onClick={onClickHandler}>click me!</button> */}
+     <Navbar/>
      <Profil/>
      {/* <PropsExample name={name} childonClickHandler={onClickHandler}/> */}
     </>
