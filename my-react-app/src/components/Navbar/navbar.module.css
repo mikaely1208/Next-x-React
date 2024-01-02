@@ -1,15 +1,15 @@
 nav {
-    background-color: #f2f2f2;
     padding: 10px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 35%;
+    width: 100%;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
-    margin-right: 10px;
+    color: white;
+    margin-right: 60px;
 }
 
 nav a:hover {
