@@ -6,6 +6,7 @@ import Profil from './components/Profile/profil'
 import PropsExample from './components/PropsExample/PropsExample'
 import Navbar from './components/Navbar/navbar'
 import Header from './components/Header/header'
+import Footer from './components/Footer/footer'
 
 function App() {
   // react nous permet de mettre à jour le state de notre composant avec des outils appeleés hooks
@@ -29,6 +30,7 @@ function App() {
      {/* <button onClick={onClickHandler}>click me!</button> */}
      <Header/>
      <Profil/>
+     <Footer/>
      {/* <PropsExample name={name} childonClickHandler={onClickHandler}/> */}
     </>
   )
