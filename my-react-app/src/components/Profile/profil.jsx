@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './profil.module.css';
 
 export default function Profil() {
@@ -25,12 +25,20 @@ export default function Profil() {
 
     reader.onload = (event) => {
       setProfilePic(event.target.result);
+      localStorage.setItem('profilePic', event.target.result); // Save the image to localStorage
     };
 
     if (file) {
       reader.readAsDataURL(file);
     }
   };
+
+  useEffect(() => {
+    const savedProfilePic = localStorage.getItem('profilePic'); // j'essaye d'utilser le localStorage pour récupérer sauvegarder l'image au refresh
+    if (savedProfilePic) {
+      setProfilePic(savedProfilePic);
+    }
+  }, []); 
 
   return (
     <div className={styles.card}>
@@ -89,7 +97,6 @@ export default function Profil() {
             </button>
           </>
         ) : (
-          
           <button type="button" onClick={handleUpdate}>
             Edit
           </button>
