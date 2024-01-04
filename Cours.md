@@ -313,3 +313,31 @@ Dans le dossier app, les dossiers correspondent normalement à des routes. Cepen
 On pourra ainsi organiser les portions de route de façon loghique sans impacter l'url.
 
 Il faut faire attention à ce que deux fichiers page situés dans des dossiers différents ne soient pas accessibles par la même route. Si c'est le cas, il faut renommer les dossiers pour éviter les conflits.
+
+
+#### Le catch-all optionnel
+
+Le catch-all optionnel peut etre rendu optionnel en ajoutant des parenthèses à la fin du nom du fichier. Cela permet de créer des routes comme /shop et /shop/1 avec un seul fichier.
+
+```
+export default function Page({params}: {params: {id: string}}) {
+  return <div>Current user ID: {params.id}</div>;
+}
+
+```
+
+#### La gestion des chargements
+
+On peut créer une interface utilisateur de chargement pour les routes dynamiques en créant un fichier _loading.tsx dans le dossier app. Ce fichier sera utilisé pour toutes les routes dynamiques.
+
+Ce système fonctionne avec React Suspense: https://react.dev/reference/react/Suspense
+
+```
+export default function Loading() {
+  return <LoadingSkeleton />;
+}
+```
+
+#### La gestion des erreurs
+
+On peut créer une interface utilisateur d'erreur pour les routes dynamiques en créant un fichier _error.tsx dans le dossier app. Ce fichier sera utilisé pour toutes les routes dynamiques.
