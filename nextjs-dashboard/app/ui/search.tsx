@@ -11,7 +11,6 @@ export default function Search() {
   const pathname = usePathname();
   const { replace } = useRouter();
 
-
   
     const handleSearch = useDebouncedCallback((term) => {
 
